@@ -1,20 +1,19 @@
-
 void drawScore(int x, int y, int Height, int score) { //4BLOCK_WIDTH × 390
   fill(200);
   stroke(200);
-  strokeWeight(20);
-  rect(x, y, BLOCK_WIDTH*4, Height, 2);
+  strokeWeight(BLOCK_WIDTH);
+  rect(x, y, BLOCK_WIDTH*4, Height);
   fill(50);
-  textSize(50);
+  textSize(BLOCK_WIDTH);
   textAlign(CENTER);
   text(score, x+BLOCK_WIDTH*2, y+Height/2);
 }
 
-void drawNextBlock(int x, int y) { //4BLOCK_WIDTH × 4BLOCK_HEIGHT
+void drawNextBlocks(int x, int y) { //4BLOCK_WIDTH × 4BLOCK_HEIGHT　次のブロック描画
   noFill();
   stroke(200);
-  strokeWeight(20);
-  rect(x, y, BLOCK_WIDTH*4, BLOCK_HEIGHT*4, 2);
+  strokeWeight(BLOCK_WIDTH);
+  rect(x, y, BLOCK_WIDTH*4, BLOCK_HEIGHT*4);
   for (int i=0; i<4; i++) //x
     for (int j=0; j<4; j++) { //y
       strokeWeight(2);
@@ -24,11 +23,11 @@ void drawNextBlock(int x, int y) { //4BLOCK_WIDTH × 4BLOCK_HEIGHT
     }
 }
 
-void drawBlocks(int x, int y) { //left up
+void drawBlocks(int x, int y) { //ブロック描画
   noFill();
   stroke(200);
-  strokeWeight(20);
-  rect(x, y, BOARD_WIDTH, BOARD_HEIGHT, 2);
+  strokeWeight(BLOCK_WIDTH);
+  rect(x, y, BOARD_WIDTH, BOARD_HEIGHT);
   for (int i=0; i<WIDTH_BLOCKS; i++) //x
     for (int j=0; j<HEIGHT_BLOCKS; j++) { //y
       strokeWeight(2);
