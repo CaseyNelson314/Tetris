@@ -18,7 +18,10 @@ void drawNextBlocks(int x, int y) { //4BLOCK_WIDTH × 4BLOCK_HEIGHT　次のブ�
     for (int j=0; j<4; j++) { //y
       strokeWeight(2);
       stroke(colorTable[0]);
-      fill(colorTable[nextBlock[i][j]]);
+      if (nextBlock[i][j]==true)
+        fill(colorTable[nextType]);
+      else
+        fill(colorTable[0]);
       rect(x+BLOCK_WIDTH*i, y+BLOCK_HEIGHT*j, BLOCK_WIDTH, BLOCK_HEIGHT);
     }
 }
@@ -32,7 +35,7 @@ void drawBlocks(int x, int y) { //ブロック描画
     for (int j=0; j<HEIGHT_BLOCKS; j++) { //y
       strokeWeight(2);
       stroke(colorTable[0]);
-      fill(colorTable[board[i][j]]);
+      fill(colorTable[boardColor[i][j]]);
       rect(x+BLOCK_WIDTH*i, y+BLOCK_HEIGHT*j, BLOCK_WIDTH, BLOCK_HEIGHT);
     }
 }
