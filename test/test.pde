@@ -21,7 +21,7 @@ boolean board[][]      = new boolean[WIDTH_BLOCKS][HEIGHT_BLOCKS]; //board[x][y]
 int     boardColor[][] = new int[WIDTH_BLOCKS][HEIGHT_BLOCKS];
 
 int nextType;
-boolean nextBlock = new boolean[4][4];
+boolean nextBlock[][] = new boolean[4][4];
 
 //落下ミノ
 int minoX;
